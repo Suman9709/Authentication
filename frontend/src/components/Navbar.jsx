@@ -28,7 +28,7 @@ const Navbar = ({ setIsAuthenticated, handleLogout }) => {
 
   return (
     <div className='flex flex-col'>
-      <div className='bg-cyan-800 flex flex-row p-4 justify-between'>
+      <div className='bg-cyan-800 flex flex-row p-4 justify-between justify-between fixed top-0 left-0 right-0 z-50'>
       <h1 className='text-white text-2xl'>Habit Track</h1>
       <ul className='flex  flex-row gap-4 text-white text-lg'>
         <Link to={"/home"}><li>Home</li></Link>

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.marquee-container {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent line breaks */
+    position: relative; /* Set relative position */
+  }
+  
+  .marquee-text {
+    display: inline-block; /* Display as inline-block for scrolling */
+    animation: scroll-left 10s linear infinite; /* Scroll animation */
+    padding-left: 100%; /* Start animation off-screen */
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0); /* Start from the original position */
+    }
+    100% {
+      transform: translateX(-100%); /* End at the left side */
+    }
+  }
+  
+  

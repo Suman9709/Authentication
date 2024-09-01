@@ -55,8 +55,12 @@ const MainPage = ({ handleLogout }) => {
       
     </div>
 
-    <div className="App">
-      <h1 className="text-4xl font-sans font-semibold mt-8 flex justify-center">Welcome To my Habit Tracker...</h1>
+    <div className="App mt-20">
+    <div className="marquee-container">
+          <h1 className="text-4xl font-sans font-semibold mt-8 flex justify-center marquee-text">
+            Welcome To my Habit Tracker...
+          </h1>
+        </div>
       
      <div className="mt-8">
      <Forminput addHabit={addHabit}/>
