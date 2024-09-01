@@ -4,23 +4,23 @@
 
 
 .marquee-container {
-    overflow: hidden; /* Hide overflowing text */
-    white-space: nowrap; /* Prevent line breaks */
-    position: relative; /* Set relative position */
+    overflow: hidden;
+    white-space: nowrap; 
+    position: relative;
   }
   
   .marquee-text {
-    display: inline-block; /* Display as inline-block for scrolling */
-    animation: scroll-left 10s linear infinite; /* Scroll animation */
-    padding-left: 100%; /* Start animation off-screen */
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; 
+    padding-left: 100%; 
   }
   
   @keyframes scroll-left {
     0% {
-      transform: translateX(0); /* Start from the original position */
+      transform: translateX(0); 
     }
     100% {
-      transform: translateX(-100%); /* End at the left side */
+      transform: translateX(-100%); 
     }
   }
   
