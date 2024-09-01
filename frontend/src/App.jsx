@@ -3,6 +3,8 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import MainPage from './components/MainPage';
 import { useEffect, useState } from 'react';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -46,6 +48,8 @@ function App() {
             )
           }
         />
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </Router>
   );
