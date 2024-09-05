@@ -11,7 +11,7 @@ const Login = ({ setIsAuthenticated }) => {
     e.preventDefault();
     try {
      
-      const response = await axios.post('http://localhost:5050/api/auth/login', {
+      const response = await axios.post('https://authentication-bzs5.onrender.com/api/auth/login', {
         email: username,
         password,
       });
