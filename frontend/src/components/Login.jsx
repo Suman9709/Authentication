@@ -10,15 +10,14 @@ const Login = ({ setIsAuthenticated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send a POST request to authenticate the user
-      const response = await axios.post('http://localhost:8080/api/auth/login', {
+     
+      const response = await axios.post('http://localhost:5050/api/auth/login', {
         email: username,
         password,
       });
 
-      // Retrieve JWT token from response
       const { token } = response.data;
-      console.log('JWT Token:', token); // Log JWT token to console
+      console.log('JWT Token:', token); 
 
       // Store token in localStorage (optional)
       // localStorage.setItem('user', JSON.stringify({ token }));

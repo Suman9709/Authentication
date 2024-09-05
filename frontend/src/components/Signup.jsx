@@ -11,19 +11,19 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted'); // Debugging log
+    console.log('Form submitted'); 
     try {
       // Send a POST request to the backend API to store user data
       const response = await axios.post('http://localhost:8080/api/users/register', {
-        firstname: fname,  // Adjusted to match backend field names
-        lastname: lname,    // Adjusted to match backend field names
+        firstname: fname,  
+        lastname: lname,   
         email,
         password,
       });
-      console.log('Signup successful:', response.data); // Debugging log
+      console.log('Signup successful:', response.data); 
 
       // After successful signup, navigate to the login page
-      navigate('/'); // Redirect to login page
+      navigate('/'); 
     } catch (error) {
       console.error('Registration failed:', error.response ? error.response.data : error.message);
     }
