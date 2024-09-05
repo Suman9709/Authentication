@@ -3,11 +3,13 @@ import Navbar from './Navbar'
 
 const About = () => {
   return (
-    <div>
-        <div>
-            <Navbar/>
-        </div>
-      <h1>About</h1>
+    <div className='flex'>
+      <div>
+        <Navbar />
+      </div>
+      <div className='mt-20 flex flex-col'>
+        <h1>  About</h1>
+      </div>
     </div>
   )
 }
