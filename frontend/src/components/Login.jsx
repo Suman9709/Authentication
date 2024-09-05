@@ -17,10 +17,9 @@ const Login = ({ setIsAuthenticated }) => {
       });
 
       const { token } = response.data;
-      console.log('JWT Token:', token); 
+      // console.log('JWT Token:', token); 
 
-      // Store token in localStorage (optional)
-      // localStorage.setItem('user', JSON.stringify({ token }));
+     
 
       // Set user as authenticated and navigate to home page
       setIsAuthenticated(true);

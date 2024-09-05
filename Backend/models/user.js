@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     required: true,
   }
 });
-const saltRounds = parseInt(process.env.SALT, 10) || 10; // Ensure SALT is correctly parsed
+const saltRounds = parseInt(process.env.SALT, 10) || 10; 
 
 userSchema.pre('save', async function(next) {
     if (this.isModified('password')) {
