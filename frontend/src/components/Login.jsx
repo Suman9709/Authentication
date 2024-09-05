@@ -18,10 +18,6 @@ const Login = ({ setIsAuthenticated }) => {
 
       const { token } = response.data;
       // console.log('JWT Token:', token); 
-
-     
-
-      // Set user as authenticated and navigate to home page
       setIsAuthenticated(true);
       navigate('/home');
     } catch (error) {

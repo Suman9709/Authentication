@@ -7,19 +7,11 @@ const Navbar = ({ setIsAuthenticated, handleLogout }) => {
 
   const handleLogoutClick = async () => {
     try {
-      // Send a POST request to the backend logout endpoint
-      await axios.post('https://authentication-bzs5.onrender.com/api/auth/logout');  // Updated URL
-
-      // Clear user data from localStorage
+      await axios.post('https://authentication-bzs5.onrender.com/api/auth/logout');  
       localStorage.removeItem('user');
-
-      // Set user as not authenticated
       setIsAuthenticated(false);
-
-      // Call the handleLogout function passed as a prop
       handleLogout();
 
-      // Navigate to the login page
       navigate('/');
     } catch (error) {
       console.error('Logout failed:', error.response ? error.response.data : error.message);

@@ -13,7 +13,6 @@ const Signup = () => {
     e.preventDefault();
     console.log('Form submitted'); 
     try {
-      // Send a POST request to the backend API to store user data
       const response = await axios.post('https://authentication-bzs5.onrender.com/api/users/register', {
         firstname: fname,  
         lastname: lname,   
@@ -22,7 +21,6 @@ const Signup = () => {
       });
       console.log('Signup successful:', response.data); 
 
-      // After successful signup, navigate to the login page
       navigate('/'); 
     } catch (error) {
       console.error('Registration failed:', error.response ? error.response.data : error.message);

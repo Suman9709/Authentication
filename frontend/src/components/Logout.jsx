@@ -7,13 +7,9 @@ const LogoutButton = ({ setIsAuthenticated }) => {
 
   const handleLogout = async () => {
     try {
-      // Call the logout API
+    
       await axios.post('https://authentication-bzs5.onrender.com/api/auth/logout');
-      
-      // Clear authentication state (e.g., token, user data)
       setIsAuthenticated(false);
-
-      // Redirect to the login page
       navigate('/login');
     } catch (error) {
       console.error('Logout failed:', error.response ? error.response.data : error.message);
