@@ -7,6 +7,21 @@ const bcrypt = require('bcrypt');
 
 
 
+// const authenticate = async(req, res, next) =>{
+// const token = req.header('Authorization');
+// if(!token){
+//   return res.status(401).json({ message: 'Access denied.' });
+// }
+// try{
+//   const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+//   req.user = decoded;
+//   next();
+// }
+// catch(err){
+//   return res.status(401).json({ message: 'Token is not valid.' });
+// }
+// };
+
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   // console.log('Received email:', email);
@@ -38,4 +53,4 @@ router.post('/logout', (req, res) => {
 });
 
 
-module.exports = router;
+module.exports = {router,authenticate};
